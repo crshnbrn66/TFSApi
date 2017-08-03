@@ -18,4 +18,5 @@
   #GET https://{instance}/DefaultCollection/{project}/_apis/test/runs?api-version={version}[&buildUri={string}&owner={string}&planId={int}&automated={bool}&includerundetails={bool}&$skip={int}&$top={int}
   $uri = "http://$tfsinstance/tfs/DefaultCollection/$tfsproject/_apis/test/runs?api-version=$apiVersion"
   $testRuns = (invoke-restmethod $uri -UseDefaultCredentials -Method Get).value
+  $testRuns
 }
